@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #388E3C;
+    text-shadow: #000000;
+}
+/* Gaya dasar untuk label */
+label {
+    display: block; /* Label tampil dalam satu baris penuh */
+    font-size: 16px; /* Ukuran font yang mudah dibaca */
+    font-weight: bold; /* Buat teks lebih tegas */
+    color: #b11212; /* Warna teks */
+    margin-bottom: 4px; /* Jarak antara label dan input */
+}
+
+/* Label dengan gaya tambahan */
+label.required::after {
+    content: " *"; /* Tambahkan tanda bintang untuk label wajib */
+    color: #e74c3c; /* Warna merah untuk tanda wajib */
+    font-weight: bolder; /* Tanda bintang tidak terlalu tebal */
+}
+
+/* Hover efek pada label */
+label:hover {
+    color: #000000; /* Ubah warna label saat hover */
+    cursor: pointer; /* Tampilkan pointer untuk interaksi */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    label {
+        font-size: 12px; /* Ukuran font lebih kecil pada layar sempit */
+    }
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+/* Gaya tombol dan tautan */
+a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #000000; /* Warna saat di-hover */
+}
+
+button, a {
+    display: inline-block;
+    background-color: #63218a;
+    color: #000000;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: right;
+    text-decoration: black;
+    transition: background-color 0.3s ease;
+}
+.btn-edit {
+    background-color: #d7ec16; /* Hijau */
+}
+
+.btn-edit:hover {
+    background-color: #182b19; /* Hijau lebih gelap */
+}
+
+/* Tombol Hapus (Merah) */
+.btn-hapus {
+    background-color: #f44336; /* Merah */
+}
+
+.btn-hapus:hover {
+    background-color: #d32f2f; /* Merah lebih gelap */
+}
+/* Tabel yang lebih tebal dan menonjol */
+.btn-save {
+    background-color: #fa0808; /* Merah lebih gelap */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 14px; /* Memperbesar ukuran font untuk keterbacaan */
+}
+
+table, th, td {
+    border: 2px solid #050505; /* Border lebih tebal */
+    padding: 8px; /* Padding yang lebih besar untuk ruang */
+    font-family: 'Times New Roman', Times, serif;
+    margin-right: auto;
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+/* Gaya header tabel */
+th {
+    background-color: #af954c; /* Warna hijau untuk header */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-bottom: 3px solid #000000; /* Border bawah header lebih tebal */
+}
+
+/* Baris tabel bergantian warna */
+tr:nth-child(even) {
+    background-color: #c22222;
+}
+
+tr:hover {
+    background-color: #1d0202; /* Efek hover untuk baris tabel */
+}
+
+/* Sentralisasi teks di setiap kolom */
+th, td {
+    text-align: center;
+    background-color: #f10bbf;
+}
+
+input[type="text"], input[type="number"], input[type="year"] {
+    padding: 8px;
+    width: 100%;
+}
+button {
+    padding: 6px;
+    margin-top: 6px;
+    cursor: pointer;
+    text-align: auto;
+}
+/* Judul */
+h1 {
+    color: #000000;
+    text-align: center;
+    font-style: italic;
+    font-weight: bolder;
+}
+h3 {
+    color: #08236e;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Animasi */
+button, a, input {
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover, a:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Styling khusus untuk form tambah/edit */
+.form-container {
+    display: flexbox;
+    flex-direction: column-reverse;
+    gap: 10px;
+    max-width: 400px; /* Membatasi lebar form */
+    margin: auto; /* Memposisikan form di tengah */
+    text-align: left;
+    
+}
+
+.form-container label {
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px;
+    display: inline-block; /* Menyusun label di atas input */
+    text-align: left;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container select {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #494747;
+    border-radius: 0px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Gaya tombol simpan */
+.form-container button[type="submit"] {
+    width: 100%;
+    background-color: #096faa;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #d41d1d;
+}
